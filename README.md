@@ -315,18 +315,3 @@ In your Render service, open **Environment** and add:
 Save the changes and redeploy. Never place the key in source code or commit `.env`.
 
 Note: free hosting availability, sleep behavior, and limits can change. Check the current Render plan details before selecting a plan. The app can still run without Gemini.
-
-## 15. GitHub push checklist
-
-Before pushing:
-
-- Confirm `.env` is not staged or committed.
-- Confirm `.gitignore` contains `.env`.
-- Run `python -m pytest -q`.
-- Run the app locally and test all three sample logs.
-- Push the `.github/workflows/tests.yml` workflow.
-- Confirm the Actions tab shows a successful test run.
-
-## 16. Resume link
-
-After deployment, add the public Render URL to your resume and GitHub repository description. Include only features you personally tested.
