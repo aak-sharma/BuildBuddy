@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: buildbuddy
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app/main.py --server.address 0.0.0.0 --server.port $PORT
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
