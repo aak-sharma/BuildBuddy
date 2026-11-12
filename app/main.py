@@ -6,8 +6,10 @@ from pathlib import Path
 import streamlit as st
 from dotenv import load_dotenv
 
-from app.analyzer import analyze_log, gemini_explanation, summarize
-
+try:
+    from app.analyzer import analyze_log, gemini_explanation, summarize
+except ModuleNotFoundError:
+    from analyzer import analyze_log, gemini_explanation, summarize
 load_dotenv()
 
 st.set_page_config(
